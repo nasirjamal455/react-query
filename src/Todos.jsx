@@ -11,7 +11,7 @@ const queryClient = new QueryClient()
     );
     return data
   }
-  const { isLoading, isError, data, error } = useQuery('todos', getTodos)
+  const { isLoading, isError, data, error } = useQuery(["todos"], getTodos)
   if (isLoading) {
     return <span>Loading...</span>
   }
